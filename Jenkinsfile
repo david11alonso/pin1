@@ -26,6 +26,7 @@ pipeline {
 
         stage('UNIT TEST'){
             steps {
+		echo 'Now Archiving...'
                 /*sh 'mvn test'*/
             }
         }
