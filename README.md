@@ -240,7 +240,10 @@ reboot
 <img width="597" alt="image" src="https://github.com/user-attachments/assets/e96b5f02-bc55-4427-adfc-9e1c365396c1">
 <img width="593" alt="image" src="https://github.com/user-attachments/assets/ebbcdd6e-49f7-42bc-b2ad-fdec1885cdca">
 
-8. 
+8. Create webhook to in sonarqube to send the information back to Jenkins
+<img width="682" alt="image" src="https://github.com/user-attachments/assets/abbc242e-2ceb-43b1-b690-5d8db5f40400">
+<img width="676" alt="image" src="https://github.com/user-attachments/assets/ca64aafd-d17d-4008-bf6e-af4c78ec7c02">
+
    
 
 ---
