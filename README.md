@@ -190,6 +190,13 @@ To install SonarQube with PostgreSQL on a Debian-based system:
 ## Configuration and Integration
 
 ### Jenkins and SonarQube Integration
+1. Generate token in SonarQube
+<img width="704" alt="image" src="https://github.com/user-attachments/assets/7041f268-4fe3-4e53-8893-a85bed8480e7">
+<img width="327" alt="image" src="https://github.com/user-attachments/assets/2a628443-5550-4e26-a9bb-01e611b09071">
+2. Add the token in the Jenkins console
+<img width="205" alt="image" src="https://github.com/user-attachments/assets/69727bf4-b481-4f4c-820a-8e87ba0efd2c">
+
+   
 1. In Jenkins, go to **Manage Jenkins** > **Configure System**.
 2. Set up SonarQube server details under **SonarQube Servers**.
 3. Generate a **SonarQube Token** and add it as a credential in Jenkins.
