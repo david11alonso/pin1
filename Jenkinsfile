@@ -34,16 +34,14 @@ pipeline {
         stage('INTEGRATION TEST'){
             steps {
 		    echo 'Now Archiving...'
-                /*sh 'mvn test'
-                sh 'mvn verify -DskipUnitTests'*/
+                /*sh 'mvn verify -DskipUnitTests'*/
             }
         }
 
         stage ('CODE ANALYSIS WITH CHECKSTYLE'){
             steps {
 		echo 'Now Archiving...'
-                /*sh 'mvn test'
-                sh 'mvn checkstyle:checkstyle'*/
+                /*sh 'mvn checkstyle:checkstyle'*/
             }
             post {
                 success {
