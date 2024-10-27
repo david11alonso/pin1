@@ -234,7 +234,12 @@ sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin 
 usermod -aG docker jenkins
 reboot
 ```
-7. 
+7. Add Maven and Java installations
+
+<img width="619" alt="image" src="https://github.com/user-attachments/assets/052b7473-663b-4ee8-a009-0952e44af7c2">
+<img width="597" alt="image" src="https://github.com/user-attachments/assets/e96b5f02-bc55-4427-adfc-9e1c365396c1">
+
+8. 
    
 
 ---
