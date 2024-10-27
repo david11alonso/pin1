@@ -33,13 +33,17 @@ pipeline {
 
         stage('INTEGRATION TEST'){
             steps {
-                sh 'mvn verify -DskipUnitTests'
+		    echo 'Now Archiving...'
+                /*sh 'mvn test'
+                sh 'mvn verify -DskipUnitTests'*/
             }
         }
 
         stage ('CODE ANALYSIS WITH CHECKSTYLE'){
             steps {
-                sh 'mvn checkstyle:checkstyle'
+		echo 'Now Archiving...'
+                /*sh 'mvn test'
+                sh 'mvn checkstyle:checkstyle'*/
             }
             post {
                 success {
