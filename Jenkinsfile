@@ -26,21 +26,21 @@ pipeline {
 
         stage('UNIT TEST'){
             steps {
-		echo 'Now Archiving...'
+		echo 'Unit Testings...'
                 /*sh 'mvn test'*/
             }
         }
 
         stage('INTEGRATION TEST'){
             steps {
-		    echo 'Now Archiving...'
+		    echo 'Integration Testings...'
                 /*sh 'mvn verify -DskipUnitTests'*/
             }
         }
 
         stage ('CODE ANALYSIS WITH CHECKSTYLE'){
             steps {
-		echo 'Now Archiving...'
+		echo 'Code analysis...'
                 /*sh 'mvn checkstyle:checkstyle'*/
             }
             post {
