@@ -189,25 +189,53 @@ To install SonarQube with PostgreSQL on a Debian-based system:
 
 ## Configuration and Integration
 
-### Jenkins and SonarQube Integration
-1. Generate token in SonarQube
+### Jenkins and SonarQube/Docker Hub Integration
+1. Install the plugins required in Jenkins:
+
+<img width="659" alt="image" src="https://github.com/user-attachments/assets/3bbca239-dcc7-411e-a1f9-f20c059bd933">
+   
+2. Generate token in SonarQube
 <img width="704" alt="image" src="https://github.com/user-attachments/assets/7041f268-4fe3-4e53-8893-a85bed8480e7">
 <img width="327" alt="image" src="https://github.com/user-attachments/assets/2a628443-5550-4e26-a9bb-01e611b09071">
 
-2. Add the token in the Jenkins console
+3. Add the token in the Jenkins console
 
 <img width="205" alt="image" src="https://github.com/user-attachments/assets/69727bf4-b481-4f4c-820a-8e87ba0efd2c">
 
+<img width="507" alt="image" src="https://github.com/user-attachments/assets/2ececae5-777d-409c-9d22-96f8bce786f4">
+<img width="423" alt="image" src="https://github.com/user-attachments/assets/b030d30f-e71f-46d0-98f2-f56e0272d254">
+<img width="585" alt="image" src="https://github.com/user-attachments/assets/47c7acbf-71f1-4d3b-9117-0dacd5aacc95">
 
+4. Add docker hub credentials:
+
+<img width="635" alt="image" src="https://github.com/user-attachments/assets/5c12e3dd-75a2-4626-8f99-bc7115d0ae4f">
+
+5. Install docker engine in the Jeknin server
+```
+# Add Docker's official GPG key:
+sudo apt-get update
+sudo apt-get install ca-certificates curl
+sudo install -m 0755 -d /etc/apt/keyrings
+sudo curl -fsSL https://download.docker.com/linux/ubuntu/gpg -o /etc/apt/keyrings/docker.asc
+sudo chmod a+r /etc/apt/keyrings/docker.asc
+
+# Add the repository to Apt sources:
+echo \
+  "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.asc] https://download.docker.com/linux/ubuntu \
+  $(. /etc/os-release && echo "$VERSION_CODENAME") stable" | \
+  sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
+sudo apt-get update
+# Install docker
+sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
+
+```
+6. Add Docker group to user jenkins and reboot the appliance
+```
+usermod -aG docker jenkins
+reboot
+```
+7. 
    
-1. In Jenkins, go to **Manage Jenkins** > **Configure System**.
-2. Set up SonarQube server details under **SonarQube Servers**.
-3. Generate a **SonarQube Token** and add it as a credential in Jenkins.
-
-### Jenkins and Docker Hub Integration
-1. Go to **Manage Jenkins** > **Manage Credentials**.
-2. Add Docker Hub credentials for Jenkins to access your Docker Hub account.
-3. Use these credentials in your pipeline script to log in and push images.
 
 ---
 
