@@ -6,7 +6,7 @@ pipeline {
 	jdk "OracleJDK11"
     }
     environment {
-        registry = "david11alonso/pin1"
+        registry = "dvd11alonso/pin1"
         registryCredential = 'dockerhub'
     }
 
