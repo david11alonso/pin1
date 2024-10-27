@@ -7,7 +7,7 @@ pipeline {
     }
 */
     environment {
-        registry = "david/pin1"
+        registry = "david11alonso/pin1"
         registryCredential = 'dockerhub'
     }
 
