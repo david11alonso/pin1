@@ -182,8 +182,8 @@ To install SonarQube with PostgreSQL on a Debian-based system:
    ```
 
 ---
-
-3. **Docker**: Download Docker from [Docker](https://www.docker.com/).
+#### **Docker**
+Download Docker from [Docker](https://www.docker.com/).
 
 ---
 
